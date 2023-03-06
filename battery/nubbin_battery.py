@@ -2,19 +2,14 @@ import battery import Battery
 from datetime import datetime
 
 
-class NubbingBattery(Battery):
+class NubbinBattery(Battery):
 
-    def __init(self, last_service_date, current_date):
-
+    def __init__(self, last_service_date):
         super().__init__(last_service_date)
+        self.last_service_date = last_service_date
 
-        this.last_service_date = last_service_date
-        this.current_date = current_date
+    def battery_needs_service(self):
+        service_threshold_date = self.last_service_date.replace(year=self.last_service_date.year + 4)
 
-    def needs_service(self):
-
-        service_threshold = self.last_service_date.replace(
-            year=self.last_service_date.year + 4)
-
-        return service_threshold < datetime.today().date():
+        return service_threshold_date < datetime.today().date()
             
