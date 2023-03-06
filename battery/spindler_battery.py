@@ -13,10 +13,5 @@ class SpindlerBattery(Battery):
         service_threshold = self.last_service_date.replace(
             year=self.last_service_date.year + 2)
 
-        if service_threshold < datetime.today().date():
+        return service_threshold < datetime.today().date()
 
-            return True
-
-        else:
-
-            return False
