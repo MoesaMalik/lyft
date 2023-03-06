@@ -1,6 +1,6 @@
 from car import Car
 from engines.sternman_engine import SternmanEngine
-from batteries.spindler_battery import SpindlerBattery
+from battery.spindler_battery import SpindlerBattery
 
 class Palindrome(Car):
     def __init__(self, last_service_date, warning_indicator_on):
