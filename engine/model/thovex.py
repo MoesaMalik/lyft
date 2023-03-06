@@ -1,6 +1,6 @@
 from car import Car
 from engines.capulet_engine import CapuletEngine
-from batteries.nubbin_battery import NubbinBattery
+from battery.nubbin_battery import NubbinBattery
 
 class Thovex(Car):
     def __init__(self, current_mileage, last_service_mileage, last_service_date):
