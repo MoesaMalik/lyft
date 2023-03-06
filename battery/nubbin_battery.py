@@ -1,4 +1,4 @@
-import battery
+import battery import Battery
 from datetime import datetime
 
 
