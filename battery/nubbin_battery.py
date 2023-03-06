@@ -16,9 +16,5 @@ class NubbingBattery(Battery):
         service_threshold = self.last_service_date.replace(
             year=self.last_service_date.year + 4)
 
-        if service_threshold < datetime.today().date():
-            return True
-
-        else:
-
-            return False
+        return service_threshold < datetime.today().date():
+            
